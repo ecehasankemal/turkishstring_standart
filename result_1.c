@@ -18,11 +18,18 @@ static inline void
 static inline short
     unicode_checker_tr(char *string, register short index)
 {
-    if ((string[index] == -61 && string[index + 1] == -89) \
-        || (string[index] == -60 && string[index + 1] == -79) \
-        || (string[index] == -61 && string[index + 1] == -74) \
-        || (string[index] == -59 && string[index + 1] == -97) \
-        || (string[index] == -61 && string[index + 1] == -68))
+    if ((string[index] == -61 && string[index + 1] == -89)    /* ç */\
+        || (string[index] == -60 && string[index + 1] == -79) /* ı */\
+        || (string[index] == -60 && string[index + 1] == -97) /* ğ */\
+        || (string[index] == -61 && string[index + 1] == -74) /* ö */\
+        || (string[index] == -59 && string[index + 1] == -97) /* ş */\
+        || (string[index] == -61 && string[index + 1] == -68) /* ü */\
+        || (string[index] == -60 && string[index + 1] == -80) /* İ */\
+        || (string[index] == -60 && string[index + 1] == -98) /* Ğ */\
+        || (string[index] == -61 && string[index + 1] == -100)/* Ü */\
+        || (string[index] == -59 && string[index + 1] == -98) /* Ş */\
+        || (string[index] == -61 && string[index + 1] == -106)/* Ö */\
+        || (string[index] == -61 && string[index + 1] == -121)/* Ç */)
         return (1);
     return (0);
 }

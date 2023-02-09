@@ -165,13 +165,23 @@ short	ft_strlen(char *str)
 
 short main(void)
 {
-	char	*str = strdup("şğ");
-	printf("%d", str[0]);
-	printf(" %d", str[1]);
-	printf("--- %d", str[2]);
-	printf (" %d", str[3]);
+	char	*str = strdup("İĞÜŞÖÇ");
+	char	*str3 = strdup("Ü");
+	//printf("%d", str[0]);
+	//printf(" %d", str[1]);
+	//printf("--- %d", str[2]);
+	//printf (" %d", str[3]);
+	printf("--- %d", str[4]);
+	printf (" %d", str[5]);
+	printf("--- %d", str[6]);
+	printf (" %d", str[7]);
+	//printf("--- %d", str[8]);
+	//printf (" %d", str[9]);
+	//printf("--- %d", str[10]);
+	//printf (" %d", str[11]);
 	char	*str2 = "ß";
 	//printf("  {{%s}}, << %d >> << %d >> << %d >> << %d >> ", str2, str2[0], str2[1], str2[2], str2[3]);
 	printf("\n------ %d -------\n", ft_strlen("şü"));
+	printf("\n ------% d -------\n", ft_strlen(str3));
 	return (0);
 } 
